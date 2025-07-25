@@ -18,7 +18,7 @@ public class entradaDeDados {
         double salario;
         System.out.print("Quanto voce recebe? ");
         salario = input.nextDouble();
-        System.out.printf("Voce recebe $ %.2f.", salario);
+        System.out.printf("Voce recebe $ %.2f. \n", salario);
 
         char gender;
         System.out.println("Qual seu genero? ");

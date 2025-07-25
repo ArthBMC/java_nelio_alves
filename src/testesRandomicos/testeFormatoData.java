@@ -1,3 +1,5 @@
+package testesRandomicos;
+
 import java.text.NumberFormat;
 import java.text.DateFormat;
 import java.util.Date;
