@@ -1,3 +1,5 @@
+package testesRandomicos;
+
 public class casting {
     public static void main(String[] args) {
 
@@ -7,7 +9,7 @@ public class casting {
         a = 5;
         b = 2;
 
-        resultado = (double) a/b; //casting
+        resultado = (double) a/b;
 
         System.out.println(resultado);
     }

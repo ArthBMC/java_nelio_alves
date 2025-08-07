@@ -1,3 +1,5 @@
+package testesRandomicos;
+
 import java.util.Locale;
 
 public class ex001 {

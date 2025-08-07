@@ -1,4 +1,4 @@
-package exercicioTriangulo;
+package section8.exercicioTrianguloSemPoo;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -32,5 +32,7 @@ public class exercicioSemPoo {
         }else  {
             System.out.println("O triangulo de area maior eh o T2");
         }
+
+        in.close();
     }
 }

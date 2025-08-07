@@ -1,3 +1,5 @@
+package testesRandomicos;
+
 import java.util.Scanner;
 
 public class scanner {
