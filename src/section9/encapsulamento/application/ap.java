@@ -1,6 +1,6 @@
-package section9.constructors.application;
+package section9.encapsulamento.application;
 
-import section9.constructors.data.Produto;
+import section9.encapsulamento.data.Produto;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -17,7 +17,10 @@ public class ap {
         System.out.print("Enter quantity in stock: ");
         int quantity = in.nextInt();
 
-        Produto product1 = new Produto(name, price);
+        Produto product1 = new Produto(name, price, quantity);
+
+        product1.setName("Meu piru");
+        System.out.println("Updated name: " + product1.getName());
 
         System.out.println("Product data: "+ product1);
 
