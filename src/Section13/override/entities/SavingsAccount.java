@@ -1,6 +1,6 @@
-package Section13.upcastingAndDowncasting.entities;
+package Section13.override.entities;
 
-public class SavingsAccount extends Account{
+public class SavingsAccount extends Account {
     private double interestRate;
 
     public SavingsAccount(){
@@ -12,6 +12,10 @@ public class SavingsAccount extends Account{
         this.interestRate = interestRate;
     }
 
+    @Override
+    public void withdraw(double amount){
+        balance-= amount;
+    }
 
     public void updateBalance(double interestRate){
         balance += balance*interestRate;
