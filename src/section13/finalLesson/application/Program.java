@@ -1,8 +1,8 @@
 package section13.finalLesson.application;
 
-import section13.override.entities.Account;
-import section13.override.entities.BusinessAccount;
-import section13.override.entities.SavingsAccount;
+import section13.finalLesson.entities.Account;
+import section13.finalLesson.entities.BusinessAccount;
+import section13.finalLesson.entities.SavingsAccount;
 
 public class Program {
     public static void main(String[] args) {
