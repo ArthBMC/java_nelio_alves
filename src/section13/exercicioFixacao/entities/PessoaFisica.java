@@ -10,11 +10,16 @@ public class PessoaFisica extends Contribuinte{
 
     @Override
     public Double calculateTax() {
+        double tax = 0.0;
         if (getIncome() < 20000) {
-            return (getIncome() * 0.15) - (health * 0.5);
+            tax = (getIncome() * 0.15) - (health * 0.5);
         }else {
-            return (getIncome() * 0.25) - (health * 0.5);
+            tax = (getIncome() * 0.25) - (health * 0.5);
         }
+        if (tax < 0){
+            tax = 0.0;
+        }
+        return tax;
     }
 
     public Double getHealth() {
