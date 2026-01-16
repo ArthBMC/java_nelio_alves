@@ -17,12 +17,14 @@ public class ManipulatingFile {
 
         System.out.println("Folders:");
         for (File folder : folders){
-            System.out.println(folder);
+            System.out.println(folder.getParent()); //pega o caminho do arquivo, sem ele
         }
         System.out.println("\nFiles:");
         for (File file : files){
-            System.out.println(file);
+            System.out.println(file.getName()); //pega o nome do arquivo
         }
+
+        //a Classe File possui diversos métodos get
 
         boolean success = new File(srtPath + "/subDirectory").mkdir();
         System.out.println("Directory created successfully: "+ success);
