@@ -1,7 +1,6 @@
 package section16.problemSolutionWithoutInterface.application;
 
 import section16.problemSolutionWithoutInterface.entities.CarRental;
-import section16.problemSolutionWithoutInterface.entities.Invoice;
 import section16.problemSolutionWithoutInterface.entities.Vehicle;
 import section16.problemSolutionWithoutInterface.model.services.BrazilTaxService;
 import section16.problemSolutionWithoutInterface.model.services.RentalService;
@@ -37,9 +36,9 @@ public class Program {
         rentalService.processInvoice(carRental);
 
         System.out.println("INVOICE:");
-        System.out.println("Basic Payment: " + carRental.getInvoice().getBasicPayment());
-        System.out.println("Tax: " + carRental.getInvoice().getTax());
-        System.out.println("Total Payment: " + carRental.getInvoice().getTotalPayment());
+        System.out.println("Basic Payment: " + String.format("$%.2f",carRental.getInvoice().getBasicPayment()));
+        System.out.println("Tax: " + String.format("$%.2f",carRental.getInvoice().getTax()));
+        System.out.println("Total Payment: " + String.format("$%.2f",carRental.getInvoice().getTotalPayment()));
 
 
 
