@@ -5,6 +5,7 @@ import section15.exercise.entities.Products;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Program {
@@ -32,12 +33,11 @@ public class Program {
                 listProducts.add(product);
             }
             
-            File newPath = new File (path.getParent() + "/out");
-            boolean success = newPath.mkdir();
-            String nPath = newPath + "/summary.csv";
+            boolean success = new File (path.getParent() + "/out").mkdir();
+            String nPath = path.getParent() + "/out/summary.csv";
             try(BufferedWriter bw = new BufferedWriter(new FileWriter(nPath))){
                 for (Products list : listProducts){
-                    bw.write(list.getName() + "," + list.getTotal());
+                    bw.write(list.getName() + "," + String.format(Locale.US,"%.2f",list.getTotal()));
                     bw.newLine();
                 }
 
@@ -50,5 +50,7 @@ public class Program {
         }catch (IOException e){
             System.out.println("Error reading the file: " + e.getMessage());
         }
+
+        in.close();
     }
 }
