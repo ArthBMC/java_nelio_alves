@@ -20,8 +20,7 @@ public class ContractService {
             LocalDate dueDate = contract.getDate().plusMonths(month);
             installmentValue += paymentService.interest(installmentValue,month);
             installmentValue += paymentService.paymentFee(installmentValue);
-            Installments installment = new Installments(dueDate, installmentValue);
-            contract.getInstallmentsList().add(installment);
+            contract.getInstallmentsList().add(new Installments(dueDate, installmentValue));
         }
     }
 
