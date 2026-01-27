@@ -1,0 +1,43 @@
+package section17.introducingSet.solvedExercise.application;
+
+
+import section17.introducingSet.solvedExercise.entities.LogEntry;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.time.Instant;
+import java.util.*;
+
+public class Program {
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in).useLocale(Locale.US);
+
+        System.out.print("Enter a full path: ");
+        String p = in.nextLine();
+        File path = new File(p);
+
+        try (BufferedReader br = new BufferedReader(new FileReader(path))){
+
+            Set<LogEntry> set = new HashSet<>();
+
+            String line = br.readLine();
+            while(line != null){
+                String[] fields = line.split(" ");
+                //String username = ;
+                //Date moment = ;
+                set.add(new LogEntry(fields[0], Date.from(Instant.parse(fields[1]))));
+                line = br.readLine();
+            }
+
+            System.out.print("Total users: " + set.size());
+
+        } catch (IOException e) {
+            System.out.println("Error: "+ e.getMessage());
+        }
+
+        in.close();
+    }
+}
