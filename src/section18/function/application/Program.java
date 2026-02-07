@@ -1,8 +1,6 @@
 package section18.function.application;
 
 import section18.function.entities.Product;
-import section18.function.util.UpperCaseName;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
